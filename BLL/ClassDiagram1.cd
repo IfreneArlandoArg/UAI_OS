@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.BLLUsuario">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAEAAAAAAAAAIBAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>BLLUsuario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.LoginSession">
+    <Position X="13.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAAAAABAAAAAAAAAIAAAAAAAAAAAAQAAAEAAA=</HashCode>
+      <FileName>LoginSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Componente">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAAACAAAAAAgAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Componente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Directorio">
+    <Position X="3" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Directorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Archivo">
+    <Position X="6" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgBACAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Archivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.gestorUsuario_Componentes">
+    <Position X="7.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAgAAAAAAAUAAAAAgAAAAAAAA=</HashCode>
+      <FileName>gestorUsuario_Componentes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BLL.IUserRegistered">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>IUserRegistered.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
