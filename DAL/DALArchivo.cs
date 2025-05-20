@@ -12,7 +12,7 @@ namespace DAL
     {
         string connectionString = "Integrated Security = SSPI; Initial Catalog = UAIOS_DB; Data Source = .;";
 
-        public void Alta(BEArchivo pBeArchivo)
+        public void Alta(BEArchivo pBeArchivo, BEUsuario pBEUsuario)
         {
             using(SqlConnection conn = new SqlConnection(connectionString)) 
             {
@@ -22,6 +22,8 @@ namespace DAL
                 cmd.Parameters.Add(new SqlParameter("@NOMBRE",pBeArchivo.Nombre));
                 cmd.Parameters.Add(new SqlParameter("@TAMANO", pBeArchivo.Tamaño));
                 cmd.Parameters.Add(new SqlParameter("@ID_DIRECTORIO", pBeArchivo.IdDirectorio));
+                cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", pBEUsuario.Id));
+
 
                 conn.Open();
 
@@ -30,7 +32,7 @@ namespace DAL
             }
         }
 
-        public List<BEArchivo> ListarArchivosDirectorio(BEDirectorio pBeDirectorio)
+        public List<BEArchivo> ListarArchivosDirectorio(BEDirectorio pBeDirectorio, BEUsuario pUsuario)
         {
             List<BEArchivo> tmp = new List<BEArchivo>();
 
@@ -42,6 +44,7 @@ namespace DAL
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(new SqlParameter("@ID_DIRECTORIO", pBeDirectorio.Id));
+                cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", pUsuario.Id));
 
                 conn.Open();
 

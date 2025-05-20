@@ -21,7 +21,7 @@ namespace BLL
         {
 
 
-            foreach(BEArchivo tmpArchivo in dalArchivo.ListarArchivosDirectorio(LoginSession.Instancia.UsuarioActual.DirectorioActual)) 
+            foreach(BEArchivo tmpArchivo in dalArchivo.ListarArchivosDirectorio(LoginSession.Instancia.UsuarioActual.DirectorioActual, LoginSession.Instancia.UsuarioActual)) 
             {
                 if (tmpArchivo.Nombre == pBEArchivo.Nombre) 
                 {
@@ -30,7 +30,7 @@ namespace BLL
               
             }
 
-            dalArchivo.Alta(pBEArchivo);
+            dalArchivo.Alta(pBEArchivo, LoginSession.Instancia.UsuarioActual);
 
             return $"Archivo : {pBEArchivo.Nombre} creado...\n";
         }
@@ -62,7 +62,7 @@ namespace BLL
 
             Componente directorioActualTmp = new Directorio(LoginSession.Instancia.UsuarioActual.DirectorioActual.Nombre);
 
-            foreach (BEArchivo bEArchivo in dalArchivo.ListarArchivosDirectorio(LoginSession.Instancia.UsuarioActual.DirectorioActual))
+            foreach (BEArchivo bEArchivo in dalArchivo.ListarArchivosDirectorio(LoginSession.Instancia.UsuarioActual.DirectorioActual, LoginSession.Instancia.UsuarioActual))
             {
                 Componente archivoTmp = new Archivo(bEArchivo.Nombre, bEArchivo.Tamaño);
 
@@ -79,7 +79,7 @@ namespace BLL
             { 
                Componente tmp = new Directorio(pBeDir.Nombre);
                
-               foreach(BEArchivo bEArchivo in dalArchivo.ListarArchivosDirectorio(pBeDir)) 
+               foreach(BEArchivo bEArchivo in dalArchivo.ListarArchivosDirectorio(pBeDir, LoginSession.Instancia.UsuarioActual)) 
                { 
                   Componente archivoTmp = new Archivo(bEArchivo.Nombre, bEArchivo.Tamaño);
                   

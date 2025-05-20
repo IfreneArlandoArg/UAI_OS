@@ -10,6 +10,7 @@ namespace BLL
     {
 
         public BEUsuario UsuarioActual { get; private set; }
+
       
 
 

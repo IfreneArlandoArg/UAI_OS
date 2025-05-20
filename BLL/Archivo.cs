@@ -12,7 +12,7 @@ namespace BLL
         {
             _tamaño = tamaño;
         }
-        public int Tamaño { get { return _tamaño; } }
+      //  public int Tamaño { get { return _tamaño; } }
         public override void AgregarHijo(Componente c)
         {
 
