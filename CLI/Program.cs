@@ -23,55 +23,66 @@ namespace CLI
 			{
 
                 do 
-                { 
+                {
+                    Console.Title = $"UAIOS  😎🍻  {DateTime.Now.ToString("yyyy-MMMM-dd")}";
 
-                BLLUsuario bllUsuario = new BLLUsuario();
+                    BLLUsuario bllUsuario = new BLLUsuario();
 
-                string cmd;
-                int count = 0;
+                  string cmd;
+                  int count = 0;
 
                     
 
-                 gestorUsuario_Componentes gestor = new gestorUsuario_Componentes();
+                  gestorUsuario_Componentes gestor = new gestorUsuario_Componentes();
 
 
 
-                BEUsuario tmpUser = null;
-                bool registrado = false;
+                  BEUsuario tmpUser = null;
+                  bool registrado = false;
 
                 
                   
 
-                while (!registrado)
-                {
+                  while (!registrado)
+                  {
 
-                    Console.WriteLine($"Intento : {count + 1}\nSe cierra el CLI después de 3 intentos fallidos. \n\n");
+                     Console.WriteLine($"Intento : {count + 1}\nSe cierra el CLI después de 3 intentos fallidos. \n\n");
 
-                    Console.WriteLine("Ingresar Usuario :");
-                    string Nombre = Console.ReadLine();
-                    Console.WriteLine("Ingresé contraseña :");
-                    string Password = Console.ReadLine();
-
-
-                    registrado = bllUsuario.UserRegistered(Nombre, Password, out tmpUser);
+                     Console.WriteLine("Ingresar Usuario :");
+                     string Nombre = Console.ReadLine();
+                     Console.WriteLine("Ingresé contraseña :");
+                     string Password = Console.ReadLine();
 
 
+                     registrado = bllUsuario.UserRegistered(Nombre, Password, out tmpUser);
 
 
-                    count++;
-
-                    if (count == 3)
-                        throw new Exception("Error Intentos...");
-
-                    if (!registrado)
-                        Console.WriteLine("\nCredenciales inválidas. Intente nuevamente.\n");
-
-                    Console.Clear();
-
-                }
 
 
-                
+                     count++;
+
+                     if (count == 3)
+                         throw new Exception("Error Intentos...");
+
+
+                    
+                     Console.Clear();
+
+                      
+
+                     if (!registrado) 
+                     {
+                        Console.Beep();
+          
+                        Console.WriteLine("Credenciales inválidas. Intente nuevamente.\n");
+                     }
+                       
+
+                  }
+
+
+
+                    
 
                 tmpUser.DirectorioActual.Nombre = $"{tmpUser.Nombre}/";
                     tmpUser.DirectorioActual.IdPadre = 0;
