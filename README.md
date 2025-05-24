@@ -12,11 +12,12 @@ Cada usuario cuenta con un entorno privado donde puede gestionar archivos y dire
 
 ## 🧠 Patrones de Diseño Aplicados
 
-- **Singleton**  
+- [**Singleton**](https://refactoring.guru/design-patterns/singleton)  
   Utilizado para el manejo de sesión del usuario. Solo puede haber una instancia de sesión activa durante el uso del sistema.
 
-- **Composite**  
+- [**Composite**](https://refactoring.guru/design-patterns/composite)  
   Implementado para modelar la estructura jerárquica de archivos y directorios. Permite tratar de forma uniforme tanto archivos como carpetas.
+
 
 ---
 
